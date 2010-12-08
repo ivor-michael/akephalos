@@ -73,7 +73,7 @@ module Akephalos
     #
     # @return [true, false] whether the selection was successful
     def select_option(option)
-      opt = @_node.getOptions.detect { |o| o.asText == option }
+      opt = @_node.getOptions.detect { |o| o.getText == option }
 
       opt && opt.setSelected(true)
     end
@@ -82,7 +82,7 @@ module Akephalos
     #
     # @return [true, false] whether the unselection was successful
     def unselect_option(option)
-      opt = @_node.getOptions.detect { |o| o.asText == option }
+      opt = @_node.getOptions.detect { |o| o.getText == option }
 
       opt && opt.setSelected(false)
     end
